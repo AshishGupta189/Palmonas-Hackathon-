@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + React</title>
+    <style>
+      *{
+        
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+      }
+      .cursor{
+          height: 40px;
+          width: 40px;
+          background-color: transparent;
+          border-radius: 50%;
+          position: fixed;
+          border:2px solid white;
+          display: flex;
+          align-items: center;
+          font-size: 6px;
+          text-align: center;
+          z-index: 25;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="cursor"></div>
+    <div id="root"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/gsap.min.js" integrity="sha512-f6bQMg6nkSRw/xfHw5BCbISe/dJjXrVGfz9BSDwhZtiErHwk7ifbmBEtF9vFW8UNIQPhV2uEFVyI/UHob9r7Cw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+
+  <script>
+    var main=document.querySelector("#root");
+    var cursor= document.querySelector(".cursor");
+    main.addEventListener("mousemove",function(dets){
+        gsap.to(cursor,{
+            x:dets.x,
+            y:dets.y,
+            duration:1
+        })
+    })  
+
+  </script>
+</html>
