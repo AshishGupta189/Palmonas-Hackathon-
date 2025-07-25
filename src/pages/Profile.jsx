@@ -38,6 +38,7 @@ const Profile = () => {
     setUser({
       name: storedUser.name || "Guest User",
       email: storedUser.email || "guest@example.com",
+      password:storedUser.password ||"",
       joinDate: storedUser.createdAt
         ? new Date(storedUser.createdAt).toLocaleDateString()
         : "Not Available",
