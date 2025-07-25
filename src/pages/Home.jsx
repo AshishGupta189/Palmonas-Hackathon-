@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 const Home = () => {
   return (
     <div className="w-full h-full scroll-smooth">
+      <h2 className="mt-16"></h2>
       <motion.img
         className="w-full object-cover object-bottom max-h-[90vh]"
         src="https://palmonas.com/cdn/shop/files/about_us_2.webp?v=1718257982&width=2000"
